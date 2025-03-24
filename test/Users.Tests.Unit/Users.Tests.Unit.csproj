@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Users.Api\Users.Api.csproj" />
+    <ProjectReference Include="..\..\src\Users.Application\Users.Application.csproj" />
+    <ProjectReference Include="..\..\src\Users.Infrastructure\Users.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+    <Using Include="AutoMapper" />
+    <Using Include="Moq" />
+    <Using Include="Moq.Protected" />
+    <Using Include="System.Net" />
+    <Using Include="System.Text" />
+    <Using Include="Microsoft.Extensions.Options" />
+    <Using Include="Users.Application.GeoLocation" />
+    <Using Include="Users.Application.Users" />
+    <Using Include="Users.Domain.GeoLocation" />
+    <Using Include="Users.Domain.Users" />
+    <Using Include="Users.Infrastructure.Users" />
+    <Using Include="Users.Shared" />
+    <!--<Using Include="Shared.DataTransferObjects.Requests" />-->
+    <Using Include="Users.Api" />
+    <Using Include="Users.Shared.DataTransferObjects.Requests" />
+  </ItemGroup>
+
+</Project>

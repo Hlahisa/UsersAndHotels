@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Users.Shared\Users.Shared.csproj" />
+    <ProjectReference Include="..\Users.Domain\Users.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Users.Domain.Users" />
+    <Using Include="Users.Domain.GeoLocation" />
+    <Using Include="AutoMapper" />
+    <Using Include="Users.Shared.DataTransferObjects" />
+    <Using Include="Users.Domain.Exceptions" />
+    <Using Include="Users.Shared.DataTransferObjects.Responses" />
+    <Using Include="Users.Shared.DataTransferObjects.Requests" />
+    <Using Include="System.Globalization" />
+  </ItemGroup>
+
+</Project>

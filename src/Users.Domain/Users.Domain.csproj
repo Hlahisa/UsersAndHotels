@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Users.Shared\Users.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Users.Domain.Abstractions" />
+    <Using Include="Users.Domain.Users" />
+    <Using Include="System.Text.Json" />
+    <Using Include="Users.Shared.DataTransferObjects" />
+    <Using Include="Users.Shared.DataTransferObjects.Requests" />
+    <Using Include="Users.Shared.DataTransferObjects.Responses" />
+  </ItemGroup>
+
+</Project>

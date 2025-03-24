@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="9.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="9.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Users.Shared\Users.Shared.csproj" />
+    <ProjectReference Include="..\Users.Application\Users.Application.csproj" />
+    <ProjectReference Include="..\Users.Infrastructure\Users.Infrastructure.csproj" />
+    <ProjectReference Include="..\Users.Domain\Users.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Users.Application.Users" />
+    <Using Include="Users.Domain.Users" />
+    <Using Include="Users.Infrastructure.Users" />
+    <Using Include="Microsoft.AspNetCore.Mvc" />
+    <Using Include="Users.Application.GeoLocation" />
+    <Using Include="Users.Domain.GeoLocation" />
+    <Using Include="Users.Domain.ErrorModel" />
+    <Using Include="Serilog" />
+    <Using Include="Microsoft.AspNetCore.Diagnostics" />
+    <Using Include="Users.Domain.Exceptions" />
+    <Using Include="Users.Shared" />
+    <Using Include="Users.Api" />
+    <Using Include="Users.Api.Extensions" />
+    <Using Include="AutoMapper" />
+    <Using Include="Users.Shared.DataTransferObjects" />
+    <Using Include="Users.Shared.DataTransferObjects.Requests" />
+    <Using Include="Users.Shared.DataTransferObjects.Responses" />
+    <Using Include="Users.Api.Documentation" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+
+</Project>
